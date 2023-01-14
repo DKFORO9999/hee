@@ -1,0 +1,13 @@
+local f=string.byte;
+local r=string.char;
+local d=string.sub;
+local P=table.concat;
+local C=math.ldexp;
+local M=getfenv or function()return _ENV end;
+local L=setmetatable;local D=select;
+local t=unpack;local X=tonumber;
+local function A(f)local e,o,n="","",{}local a=256;
+local c={}for l=0,a-1 do c[l]=r(l)end;local l=1;
+local function t()local e=X(d(f,l,l),36)l=l+1;
+local o=X(d(f,l,l+e-1),36)l=l+e;return o end;e=r(t())n[1]=e;while l<#f do
+local l=t()if c[l]then o=c[l]else o=e..d(e,1,1)end;c[a]=e..d(o,1,1)n[#n+1],e,a=o,o,a+1 end;return table.concat(n)end;local 
